@@ -1,0 +1,59 @@
+---
+title: Defining the niche from user input
+category: Business Analysis
+tags:
+  - pm
+  - business-analysis
+  - positioning
+  - segmentation
+  - niche
+---
+INPUTS
+<provided_inputs>
+- {{USER_INPUT}}
+</provided_inputs>
+
+GOAL
+Produce a high-quality deliverable for: Defining the niche from user input.
+Success metric:
+- Completes all required tasks and decision logic from the prompt instructions.
+- Output is specific, evidence-based, and actionable.
+- Output follows the required structure exactly.
+
+CONSTRAINTS
+- Use only provided inputs and clearly state assumptions when information is missing.
+- Do not skip required analysis steps, sections, or validation logic.
+- Keep recommendations/outputs grounded in the input context; avoid generic filler.
+- Follow these task requirements:
+<task_requirements>
+- Analyze input for: audience demographics, interests/behaviors, geography/context, product/service attributes, and unique value points.
+- Each niche must combine multiple dimensions (at least 3 of: demographics, interests, geography/context, use case, value driver).
+- Avoid broad segments; each niche should be narrow enough to target with specific messaging.
+- Do not invent unrelated industries, audiences, or value propositions not implied by `USER_INPUT`.
+- Ensure all 10 niches are materially different from each other.
+</task_requirements>
+
+FORMAT
+Return exactly this structure:
+
+<niche_definitions>
+<analysis_summary>
+[Brief synthesis of key input signals used to define niches]
+</analysis_summary>
+1. <niche>[Highly specific niche definition]</niche>
+2. <niche>[Highly specific niche definition]</niche>
+3. <niche>[Highly specific niche definition]</niche>
+4. <niche>[Highly specific niche definition]</niche>
+5. <niche>[Highly specific niche definition]</niche>
+6. <niche>[Highly specific niche definition]</niche>
+7. <niche>[Highly specific niche definition]</niche>
+8. <niche>[Highly specific niche definition]</niche>
+9. <niche>[Highly specific niche definition]</niche>
+10. <niche>[Highly specific niche definition]</niche>
+</niche_definitions>
+
+FAILURE
+- Output misses required sections, steps, or reasoning required by `<task_requirements>`.
+- Required format/schema is missing, malformed, or incomplete.
+- Claims are generic or not grounded in provided inputs.
+- Assumptions are used but not explicitly stated.

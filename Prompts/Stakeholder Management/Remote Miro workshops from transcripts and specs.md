@@ -1,0 +1,90 @@
+---
+title: Remote Miro workshops from transcripts and specs
+category: Stakeholder Management
+tags:
+  - workshops
+  - miro
+  - facilitation
+  - remote
+---
+INPUTS
+<provided_inputs>
+- {{TRANSCRIPT}}
+- {{TIME_LIMIT}}
+- {{GOAL}}
+</provided_inputs>
+
+GOAL
+Produce a high-quality deliverable for: Remote Miro workshops from transcripts and specs.
+Success metric:
+- Completes all required tasks and decision logic from the prompt instructions.
+- Output is specific, evidence-based, and actionable.
+- Output follows the required structure exactly.
+
+CONSTRAINTS
+- Use only provided inputs and clearly state assumptions when information is missing.
+- Do not skip required analysis steps, sections, or validation logic.
+- Keep recommendations/outputs grounded in the input context; avoid generic filler.
+- Build a focused remote Miro workshop plan from `{{TRANSCRIPT}}` to achieve `{{GOAL}}` within `{{TIME_LIMIT}}` minutes.
+- Create a sequenced agenda of 3-6 activities with dependencies where each activity output feeds the next.
+- Include a global timeline that sums exactly to `{{TIME_LIMIT}}` (including intro, any break time, and wrap-up).
+- Start with transcript analysis (themes, decisions/questions, constraints/risks, assumptions).
+- For each activity include objective, duration, format, participant instructions, facilitator notes with concrete Miro steps, materials/tools, and output artifact.
+- Include bias-mitigation and accessibility practices, plus contingency handling for +/-10% time slip.
+- End with wrap-up handoff (decision log, owners, deadlines, artifacts, comms plan) and an alternative action if full goal is not achieved.
+- If the goal is unrealistic for the time limit, state why and propose a right-sized goal or revised duration.
+
+FORMAT
+Return exactly this structure:
+
+### Transcript Analysis
+- **Key themes:** [text]
+- **Decisions/questions to answer:** [text]
+- **Constraints & risks:** [text]
+- **Assumptions (if any):** [text]
+
+### Global Timeline (sums to `{{TIME_LIMIT}}`)
+- 00:00-00:XX [step] — **XX min**
+- [additional timed steps]
+- [final step ending at `{{TIME_LIMIT}}`] — **ZZ min**
+- **Total: `{{TIME_LIMIT}}` minutes**
+
+### Pre-Read (send 24-48h before)
+- [item]
+
+### Activities
+#### Activity 1: *[Name]*
+- **Objective:** [text]
+- **Duration:** [x] minutes
+- **Format:** [text]
+- **Participant instructions:** [text]
+- **Facilitator notes (with Miro steps):**
+  - Board: [frame/template/lock-unlock actions]
+  - Breakouts: [pod setup + return protocol]
+  - Timer: [minutes + buffer]
+  - Voting: [votes/person + criteria + rounds]
+  - Capture: [tags/colors/export method]
+- **Materials & tools:** [text]
+- **Output artifact:** [text]
+
+[Repeat for each activity, total 3-6]
+
+### Wrap-Up & Decision Handoff
+- **Decision log:** [text]
+- **Owners & deadlines:** [text]
+- **Artifacts:** [text]
+- **Communication plan:** [text]
+
+### Alternative Action (if goal not achieved)
+- **Why not:** [text]
+- **Fallback:** [right-sized option or Part 2 with exact minutes]
+- **Prereqs for next session:** [text]
+
+FAILURE
+- Any required section is missing or materially incomplete.
+- Timeline durations do not sum exactly to `{{TIME_LIMIT}}`.
+- Agenda has fewer than 3 or more than 6 activities.
+- Activities do not specify actionable Miro runbook steps or output dependencies.
+- Missing bias/accessibility practices, contingencies, or alternative action path.
+- Claims are generic or not grounded in provided inputs.
+- Assumptions are used but not explicitly stated.

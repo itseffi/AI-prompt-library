@@ -1,0 +1,102 @@
+---
+title: Press releases from product vision (Working Backwards)
+category: Presentation & Communication
+tags:
+  - storytelling
+  - press-release
+  - working-backwards
+  - product-strategy
+  - communication
+  - influence
+---
+INPUTS
+<provided_inputs>
+- {{PRODUCT_OR_SERVICE}}
+- {{TARGET_PERSONAS}}
+- {{FEATURES_USPS}}
+- {{COMPANY_CONTEXT}}
+- {{PROBLEMS_GOALS}}
+- {{EVIDENCE_METRICS}}
+- {{AUDIENCES_CHANNELS}}
+- Optional: {{LAUNCH_DATE_PRICING_AVAILABILITY}}
+</provided_inputs>
+
+GOAL
+Produce a high-quality deliverable for: Press releases from product vision (Working Backwards).
+Success metric:
+- Produces a credible Working Backwards-style launch press release that is specific and evidence-backed.
+- Includes exactly two quotes (executive + customer/partner) and at least one concrete proof point.
+- Clearly states availability/pricing/requirements and a direct call to action.
+- Output follows the required structure exactly.
+
+CONSTRAINTS
+- Use only provided inputs; if required launch details are missing, use bracketed placeholders like `[CITY]`, `[DATE]`, `[STAT]`.
+- If placeholders are used, append a short `Fill These Gaps` checklist once after the release.
+- Output must be Markdown only (no XML/JSON wrappers).
+- Target length: 350-550 words (plus Media Contact block).
+- Tone: visionary but plain-spoken, AP-style clarity, active voice, short paragraphs.
+- Avoid hype words (for example `revolutionary`, `game-changing`) unless in quotes.
+- Include at least one concrete proof point (metric, benchmark, ROI, independent signal, certification, or analyst note).
+- Include exactly two quotes:
+  - one executive quote (vision/why now),
+  - one customer/partner quote (outcome/benefit).
+- Use the structure labels in `FORMAT` verbatim.
+- Convert each feature into a clear user/business outcome.
+- No unverifiable regulated claims, no competitor bashing, no guaranteed-future promises.
+
+FORMAT
+Return exactly this structure:
+
+# [Product Name]
+Subhead: [One-line value proposition]
+
+Dateline: [CITY], [STATE/PROVINCE], [COUNTRY] — [MONTH DAY, YEAR]
+
+**Lede (Intro, 2-3 sentences):**
+[Announcement summary with who/what/for whom/outcome]
+
+**Body Paragraph (What it does & why it matters):**
+[How it works, why now, and executive quote]
+
+**Feature Highlights:**
+- [Feature 1]: [What it is] -> [Outcome]
+- [Feature 2]: [What it is] -> [Outcome]
+- [Feature 3]: [What it is] -> [Outcome]
+[Optional features 4-6]
+
+**Evidence & Context:**
+[At least one concrete proof point with precise number/signal]
+
+**Customer/Partner Quote:**
+"[Outcome-focused quote]," said [Name, Title, Company].
+
+**Availability, Pricing, Requirements:**
+- Availability: [Date/Region/Tiers]
+- Pricing: [Model/Currency/Tiers]
+- Requirements: [Integrations/devices/plans/compliance prerequisites]
+
+**Call to Action:**
+[Learn more/contact/demo links]
+
+**Boilerplate:**
+[Company background, mission, and relevant credibility]
+
+**Media Contact**
+[Name] — [Title]
+Phone: [Number] • Email: [Email]
+Press Kit: [Link]
+
+[Optional: Fill These Gaps
+- [Missing item 1]
+- [Missing item 2]]
+
+FAILURE
+- Required section labels from `FORMAT` are missing, renamed, malformed, or incomplete.
+- Word count is materially outside 350-550 (excluding Media Contact).
+- Not exactly two quotes, or quotes are not executive + customer/partner types.
+- No concrete proof point is included.
+- Feature bullets do not translate to outcomes.
+- Placeholder gaps exist but `Fill These Gaps` is missing.
+- Output contains XML/JSON wrappers.
+- Claims are generic or not grounded in provided inputs.
+- Assumptions are used but not explicitly stated.

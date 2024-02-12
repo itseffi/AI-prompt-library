@@ -1,0 +1,81 @@
+---
+title: Problem statement framing from conversation transcript
+category: User Research
+tags:
+  - user-research
+  - problem-framing
+  - transcripts
+---
+INPUTS
+<provided_inputs>
+- `{{SESSION_CONTEXT}}`: Conversation/session transcript and related context to analyze.
+</provided_inputs>
+
+GOAL
+Convert session context into a clear, empathetic, user-centered Problem Framing Canvas that stakeholders can use to align on the real problem before solutioning.
+Success metric:
+- The canvas accurately reflects transcript evidence and persona perspective.
+- The narrative captures need, barriers, root cause, and emotional impact.
+- The final problem statement is concise, actionable, and faithful to the input context.
+
+CONSTRAINTS
+- Use only `{{SESSION_CONTEXT}}`; if data is missing, state assumptions explicitly.
+- Perform all required analysis steps before writing the final canvas:
+- Analyze persona, pain points, desired outcomes, barriers, root cause, emotional impact, and contextual constraints.
+- Build a complete Problem Framing Narrative from the persona point of view.
+- Enumerate relevant context and constraints (for example: geographic, technological, temporal, demographic, operational).
+- Generate multiple candidate final statements internally, then select the strongest one.
+- Keep claims evidence-based and grounded in transcript details.
+- Final output must include only the finalized Problem Framing Canvas (no chain-of-thought, no extra sections).
+
+FORMAT
+Return only this final Markdown structure:
+
+```markdown
+## Problem Framing Canvas
+
+### Problem Framing Narrative
+
+I am:
+- [Point 1]
+- [Point 2]
+- [Point 3]
+
+Trying to:
+- [Desired outcomes]
+
+But:
+- [Barrier 1]
+- [Barrier 2]
+- [Barrier 3]
+
+Because:
+- [Root cause]
+
+Which makes me feel:
+- [Emotional impact]
+
+### Context & Constraints
+
+- [Factor 1]
+- [Factor 2]
+- [Factor 3]
+...
+
+### Final Problem Statement
+
+[Concise problem statement]
+```
+
+Additional format rules:
+- Keep headings exactly as shown.
+- Maintain persona-first wording in the narrative.
+- Use concise bullet points and avoid generic filler.
+
+FAILURE
+- Output is not exactly a `Problem Framing Canvas` in the required Markdown structure.
+- Any required canvas section is missing or materially incomplete.
+- Narrative is not written from persona perspective.
+- Problem statement is vague, solution-biased, or not grounded in transcript evidence.
+- Context/constraints are generic or irrelevant to provided input.
+- Assumptions are required but not explicitly stated.

@@ -1,0 +1,65 @@
+---
+title: "Complex problem structuring into actionable recommendations"
+category: "Decision Making"
+tags:
+  - decision-making
+  - problem-structuring
+  - analysis
+  - consulting
+---
+INPUTS
+<provided_inputs>
+- {{PROBLEM_STATEMENT}}
+</provided_inputs>
+
+GOAL
+Structure a complex problem into a clear analysis and actionable recommendation.
+Success metric:
+- Produces a concise problem simplification with key issues/stakeholders.
+- Includes both deductive and inductive analysis streams.
+- Synthesizes insights into a concrete recommendation with rationale.
+- Follows the required output structure exactly.
+
+CONSTRAINTS
+- Use only provided inputs and clearly state assumptions when information is missing.
+- Do not skip required steps:
+  1. Simplify the problem into core components and stakeholders.
+  2. Perform deductive analysis (top-down logic and option tree).
+  3. Perform inductive analysis (specific evidence/patterns/examples).
+  4. Synthesize both analyses (alignment/conflicts and key insight).
+  5. Recommend an actionable course of action.
+- Keep reasoning objective, explicit, and grounded in `PROBLEM_STATEMENT`.
+- Clearly label assumptions if evidence is incomplete.
+
+FORMAT
+Return exactly this structure:
+
+<analysis>
+<simplified_problem>
+[Provide a concise summary of the simplified problem]
+</simplified_problem>
+
+<deductive_analysis>
+[Present your logical tree of options and ideas, including key considerations and potential outcomes]
+</deductive_analysis>
+
+<inductive_analysis>
+[Discuss specific examples, data points, or patterns you've identified and their implications]
+</inductive_analysis>
+
+<synthesis>
+[Explain how your deductive and inductive analyses complement or contrast with each other, and what overall insights they provide]
+</synthesis>
+
+<recommendation>
+[Clearly state your recommended course of action, explaining why it's the best approach based on your analysis]
+</recommendation>
+</analysis>
+
+FAILURE
+- Required schema is missing or malformed.
+- Any required analysis section is missing or materially incomplete.
+- Deductive and inductive analyses are not clearly distinguished.
+- Recommendation is generic or not supported by prior analysis.
+- Claims are generic or not grounded in provided inputs.
+- Assumptions are used but not explicitly stated.
