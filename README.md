@@ -1,5 +1,7 @@
 # AI Prompt Library & Prompt Generator for Product Managers
 
+![AI Prompt Library Header](Assets/header.png)
+
 A library of **160 prompts** and a built-in **Prompt Generator** for AI Product Managers and Product Leads. Built with **Prompt Contracts**. Works on all LLM assistants (ChatGPT, Claude, Gemini, HuggingChat, etc).
 
 ## Prompt Contract Standard Used In This Library
