@@ -1,4 +1,4 @@
-# 🚀 AI Prompt Library & Prompt Generator for Product Managers
+# AI Prompt Library & Prompt Generator for Product Managers
 
 A library of **160 prompts** and a built-in **Prompt Generator** for AI Product Managers and Product Leads. Built with prompt contracts. Works on all LLM assistants (ChatGPT, Claude, Gemini, HuggingChat, etc).
 
@@ -10,7 +10,7 @@ This is the operating standard for both `Prompts/` and `Workflows/`.
 Generic prompt example:
 `Write an email about our product launch. Make it engaging.`
 
-Prompt Contract replaces vague instructions with explicit control:
+Prompt Contract replaces vague instructions with explicit control, dramatically improving output quality and cutting rewrite cycles:
 1. `GOAL` -> exact success metric
 2. `CONSTRAINTS` -> hard boundaries that must be followed
 3. `FORMAT` -> required output schema/structure
@@ -31,7 +31,7 @@ Measurable failure condition:
 Rule of thumb:
 `No measurable GOAL + no explicit FAILURE = low-control output.`
 
-## 🔧 Prompt Format
+## Prompt Format
 
 Each prompt follows a consistent structure with frontmatter + a Prompt Contract.
 
@@ -132,7 +132,7 @@ FAILURE
 
 All prompts in this library should use the Prompt Contract format above. Do not use role-based `You are...` prompt style.
 
-## 📚 What's Inside
+## What's Inside
 
 | Category | Prompts | Description |
 |:---------|:--------|:------------|
@@ -147,7 +147,7 @@ All prompts in this library should use the Prompt Contract format above. Do not 
 | **Technical** | 5 | Architecture briefs, acceptance criteria, Shape Up |
 | **User Research** | 29 | JTBD interviews, persona creation, assumption testing |
 
-## 🎯 7 Ready-to-Use Workflows
+## 7 Ready-to-Use Workflows
 
 Pre-sequenced prompt chains for common PM scenarios:
 
@@ -207,15 +207,18 @@ Transform this library into your personal AI Prompt Generator that creates or re
 4. Set Project Instructions:
 
 ```md
-You are an AI Prompt Generator for Product Managers, Product Leads, and cross-functional teams.
+ROLE
+You are the AI Prompt Generator for this Prompt Contract library for Product Managers, Product Leads, and cross-functional teams.
 
-You have access to a library of 160 professional prompts. Your role is to:
+GOAL
+Retrieve or generate the highest-fit prompt for the user's task while preserving this library's Prompt Contract standard.
 
-1. Find relevant prompts:
-- When a user describes a task, search the library and suggest the most relevant existing prompts first.
-
-2. Generate new prompts:
-- When no existing prompt fits, create a new prompt that follows this library's Prompt Contract standard:
+CONSTRAINTS
+- Search the uploaded library first and prioritize reuse over generation.
+- Decision policy:
+  - If an existing prompt is >=80% fit, return that prompt first with minimal edits.
+  - Generate a new prompt only when no existing prompt can satisfy the task after reasonable customization.
+- New prompts must follow the exact structure:
   - INPUTS
   - GOAL
   - CONSTRAINTS
@@ -223,11 +226,28 @@ You have access to a library of 160 professional prompts. Your role is to:
   - FAILURE
 - Use explicit {{VARIABLE_NAME}} placeholders.
 - Keep constraints and failure conditions measurable and testable.
+- Do not return vague instructions such as "make it engaging" without measurable success/failure criteria.
+- Keep category selection to one of:
+  - Business Analysis
+  - Decision Making
+  - Design & Prototyping
+  - Ideation & Creativity
+  - Presentation & Communication
+  - Product Strategy
+  - Project Management
+  - Stakeholder Management
+  - Technical
+  - User Research
 
-3. Customize prompts:
-- Adapt existing prompts to the user's context by refining variables, constraints, format, and failure conditions.
+FORMAT
+If reusing/customizing an existing prompt, return:
+- Selected prompt title
+- Category
+- Why it matches (2-4 bullets)
+- Required variable substitutions
+- Minimal edits (if any)
 
-Output format for new prompts:
+If generating a new prompt, return exactly:
 ---
 title: [Descriptive title]
 category: [One of: Business Analysis, Decision Making, Design & Prototyping, Ideation & Creativity, Presentation & Communication, Product Strategy, Project Management, Stakeholder Management, Technical, User Research]
@@ -249,6 +269,12 @@ FORMAT
 
 FAILURE
 [explicit disqualifiers]
+
+FAILURE
+- Recommends a new prompt when an existing prompt is already >=80% fit.
+- Omits required contract clauses (INPUTS/GOAL/CONSTRAINTS/FORMAT/FAILURE) in generated prompts.
+- Uses non-measurable constraints or disqualifiers.
+- Fails to explain selection rationale for retrieved prompts.
 ```
 
 Try prompts like:
@@ -266,7 +292,7 @@ Try prompts like:
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 AI-prompt-library/
@@ -294,6 +320,6 @@ AI-prompt-library/
 └── README.md
 ```
 
-## 📝 License
+## License
 
 MIT License — use freely, attribution appreciated.
